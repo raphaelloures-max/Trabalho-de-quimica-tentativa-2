@@ -300,53 +300,64 @@ p { max-width: 62ch; }
   padding-bottom: var(--space-6);
 }
 
-.team-card {
+.section__intro--center {
+  margin-inline: auto;
+  text-align: center;
+}
+.section__intro--center p { margin-inline: auto; }
+
+.team-line {
   max-width: 720px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
-  box-shadow: var(--shadow-soft);
-}
-
-.team-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  margin-bottom: var(--space-3);
-}
-
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2) var(--space-4);
+  margin: var(--space-5) auto 0;
+  text-align: center;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-}
-
-.team-list li {
-  position: relative;
-  padding-left: var(--space-3);
+  letter-spacing: 0.02em;
   color: #315862;
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(6, 35, 44, 0.12);
 }
 
-.team-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-accent-dark);
+body.high-contrast .team-line {
+  color: #ffffff;
+  border-top-color: #ffffff;
 }
 
-body.high-contrast .team-card {
-  background: #000000;
+.eco-grid {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 700px) {
+  .eco-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.eco-block {
+  background: rgba(244, 251, 250, 0.06);
+  border: 1px solid rgba(244, 251, 250, 0.18);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+.eco-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-accent);
+}
+.eco-block p {
+  font-size: 0.95rem;
+  color: var(--color-mist);
+  max-width: none;
+}
+
+body.high-contrast .eco-block {
   border: 2px solid #ffffff;
-  box-shadow: none;
+  background: #000000;
 }
-body.high-contrast .team-list li { color: #ffffff; }
-body.high-contrast .team-list li::before { background: #ffe066; }
+body.high-contrast .eco-block h3 { color: #ffe066; }
+body.high-contrast .eco-block p { color: #ffffff; }
 
 .cards-grid {
   display: grid;
