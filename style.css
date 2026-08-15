@@ -296,6 +296,58 @@ p { max-width: 62ch; }
   text-align: left;
 }
 
+.section--sobre {
+  padding-bottom: var(--space-6);
+}
+
+.team-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-soft);
+}
+
+.team-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-3);
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.team-list li {
+  position: relative;
+  padding-left: var(--space-3);
+  color: #315862;
+}
+
+.team-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent-dark);
+}
+
+body.high-contrast .team-card {
+  background: #000000;
+  border: 2px solid #ffffff;
+  box-shadow: none;
+}
+body.high-contrast .team-list li { color: #ffffff; }
+body.high-contrast .team-list li::before { background: #ffe066; }
+
 .cards-grid {
   display: grid;
   gap: var(--space-4);
