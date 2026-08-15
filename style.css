@@ -300,12 +300,6 @@ p { max-width: 62ch; }
   padding-bottom: var(--space-6);
 }
 
-.section__intro--center {
-  margin-inline: auto;
-  text-align: center;
-}
-.section__intro--center p { margin-inline: auto; }
-
 .team-line {
   max-width: 720px;
   margin: var(--space-5) auto 0;
