@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importância da Água</title>
+  <meta name="description" content="Um mergulho visual pela importância da água: o que ela faz pelo corpo, como o ciclo hídrico funciona e como se hidratar melhor no dia a dia." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="depth-gauge" aria-hidden="true">
+    <div class="depth-gauge__track">
+      <div class="depth-gauge__fill" id="depthFill"></div>
+    </div>
+    <span class="depth-gauge__label" id="depthLabel">0%</span>
+  </div>
+
+    <header class="site-header" id="topo">
+    <div class="site-header__inner">
+      <a href="#topo" class="logo" aria-label="Importância da Água, página inicial">
+        <span class="logo__drop" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C12 2 5 11.5 5 16.2C5 20 8.13 23 12 23C15.87 23 19 20 19 16.2C19 11.5 12 2 12 2Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo__text">Importância<em>da Água</em></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#funcoes">Funções</a></li>
+          <li><a href="#ciclo">Ciclo</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+        </ul>
+      </nav>
+
+      <div class="a11y-controls" role="group" aria-label="Controles de acessibilidade">
+        <div class="a11y-controls__fontsize" role="group" aria-label="Ajustar tamanho do texto">
+          <button type="button" id="fontDecrease" aria-label="Diminuir tamanho do texto">A−</button>
+          <button type="button" id="fontReset" aria-label="Restaurar tamanho de texto padrão">A</button>
+          <button type="button" id="fontIncrease" aria-label="Aumentar tamanho do texto">A+</button>
+        </div>
+        <button type="button" id="contrastToggle" class="contrast-toggle" aria-pressed="false">
+          <span aria-hidden="true">◐</span> Alto contraste
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+        <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero__content reveal">
+        <p class="eyebrow">Seu corpo é, em grande parte, um oceano</p>
+        <h1 id="hero-title">
+          Água não é só sede.<br />
+          É <em>vida</em> em movimento.
+        </h1>
+        <p class="hero__lead">
+          Ela regula sua temperatura, transporta nutrientes e mantém cada célula do
+          seu corpo funcionando. Role a página para mergulhar mais fundo nessa história —
+          o medidor ao lado marca sua profundidade.
+        </p>
+        <a href="#funcoes" class="btn btn--primary">Começar o mergulho ↓</a>
+      </div>
+
+      <div class="hero__stat" aria-hidden="true">
+        <div class="water-stat">
+          <svg class="water-stat__ring" viewBox="0 0 200 200">
+            <circle class="water-stat__track" cx="100" cy="100" r="88" />
+            <circle class="water-stat__value" cx="100" cy="100" r="88" />
+          </svg>
+          <div class="water-stat__center">
+            <span class="water-stat__number">60%</span>
+            <span class="water-stat__caption">do corpo humano<br />adulto é água</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__waves" aria-hidden="true">
+        <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+          <path class="wave wave--back" d="M0,96 C240,160 480,32 720,64 C960,96 1200,160 1440,96 L1440,200 L0,200 Z"></path>
+          <path class="wave wave--front" d="M0,128 C240,64 480,176 720,112 C960,48 1200,144 1440,96 L1440,200 L0,200 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+        <section id="funcoes" class="section section--light" aria-labelledby="funcoes-title">
+      <div class="section__intro reveal">
+        <p class="eyebrow">Por dentro</p>
+        <h2 id="funcoes-title">O que a água faz por você, a cada segundo</h2>
+        <p>
+          Sem que você perceba, a água trabalha em praticamente todas as funções
+          vitais do organismo. Estes são alguns dos papéis que ela desempenha.
+        </p>
+      </div>
+
+      <div class="cards-grid reveal" id="cardsGrid" role="list" aria-label="Funções da água no corpo humano">
+              </div>
+    </section>
+
+        <section id="ciclo" class="section section--deep" aria-labelledby="ciclo-title">
+      <div class="section__intro reveal">
+        <p class="eyebrow">Um recurso finito</p>
+        <h2 id="ciclo-title">A água percorre um ciclo. A escassez, também.</h2>
+        <p>
+          Apenas uma fração da água do planeta está disponível e acessível para
+          consumo humano. Abra cada item abaixo para entender por que cuidar
+          dela é urgente.
+        </p>
+      </div>
+
+      <div class="accordion reveal" id="accordion">
+              </div>
+    </section>
+
+        <section id="dicas" class="section section--light" aria-labelledby="dicas-title">
+      <div class="section__intro reveal">
+        <p class="eyebrow">Na prática</p>
+        <h2 id="dicas-title">Beba melhor, viva melhor</h2>
+        <p>Pequenos hábitos que ajudam você a manter uma boa hidratação todos os dias.</p>
+      </div>
+
+      <div class="carousel reveal" id="carousel" aria-roledescription="carrossel" aria-label="Dicas de hidratação">
+        <div class="carousel__viewport">
+          <ul class="carousel__track" id="carouselTrack">
+                      </ul>
+        </div>
+
+        <div class="carousel__controls">
+          <button type="button" class="carousel__btn" id="carouselPrev" aria-label="Dica anterior">‹</button>
+          <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Selecionar dica"></div>
+          <button type="button" class="carousel__btn" id="carouselNext" aria-label="Próxima dica">›</button>
+        </div>
+
+        <p class="sr-only" id="carouselStatus" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="site-footer section--abyss">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="logo__drop" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C12 2 5 11.5 5 16.2C5 20 8.13 23 12 23C15.87 23 19 20 19 16.2C19 11.5 12 2 12 2Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <p>Cada gota conta. Cuide da água como cuida de você.</p>
+      </div>
+
+      <nav aria-label="Links do rodapé">
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#funcoes">Funções</a></li>
+          <li><a href="#ciclo">Ciclo</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
